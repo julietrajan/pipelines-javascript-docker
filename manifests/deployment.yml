@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: julietrajanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: julietrajanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: julietrajanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: julietrajanpipelinesjavascriptdocker 
+          image: jul7acr.azurecr.io/julietrajanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
